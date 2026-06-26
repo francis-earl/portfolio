@@ -1,0 +1,10 @@
+.indicator {
+  opacity: 0;
+  transform: scaleY(0.7);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.active-link .indicator {
+  opacity: 1;
+  transform: scaleY(1);
+}
