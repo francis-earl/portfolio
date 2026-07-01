@@ -5,6 +5,7 @@ import { SkillsPage } from './features/skills-page/skills-page';
 import { ProjectsPage } from './features/projects-page/projects-page';
 import { LearningPage } from './features/learning-page/learning-page';
 import { ContactPage } from './features/contact-page/contact-page';
+import { ChangelogPage } from './features/changelog-page/changelog-page';
 
 export const routes: Routes = [
   {
@@ -35,5 +36,9 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactPage
+  },
+  {
+    path: 'changelog',
+    component: ChangelogPage
   }
 ];

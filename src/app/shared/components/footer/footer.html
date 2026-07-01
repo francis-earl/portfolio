@@ -1,0 +1,38 @@
+<footer
+  class="mono-text mx-auto flex w-full max-w-248 flex-row flex-wrap items-center justify-between gap-5 border-t border-stone-200 px-4 pt-6 pb-5 font-mono text-xs md:px-8 lg:px-6"
+>
+  <div>
+    © <time>{{ currentYear }}</time> Francis Earl Fojas. All rights reserved.
+  </div>
+  <div>
+    v{{ buildInfo.version }} •
+    <a routerLink="/changelog" class="text-amber-700 underline-offset-4 transition hover:underline"
+      >View Changelog</a
+    >
+    • Updated
+    <time [attr.datetime]="buildInfo.buildDate">{{ buildInfo.buildDate | date: 'MMM d, y' }}</time>
+  </div>
+  <div class="flex flex-col items-start gap-2.5 sm:flex-row sm:items-center">
+    <p>Built with</p>
+    <ul class="flex flex-col items-start gap-2.5 sm:flex-row sm:items-center sm:gap-4">
+      <li class="inline-flex items-center gap-1.5">
+        <img src="logo/angular.svg" alt="" aria-hidden="true" class="h-4.5 w-4.5 sm:h-3.5 sm:w-3.5" /><span
+          >Angular 22</span
+        >
+      </li>
+      <li class="inline-flex items-center gap-1.5">
+        <img
+          src="logo/typescript.svg"
+          alt=""
+          aria-hidden="true"
+          class="h-4.5 w-4.5 sm:h-3.5 sm:w-3.5"
+        /><span>TypeScript 6</span>
+      </li>
+      <li class="inline-flex items-center gap-1.5">
+        <img src="logo/tailwindcss.svg" alt="" aria-hidden="true" class="h-4.5 w-4.5" /><span
+          >Tailwind CSS 4</span
+        >
+      </li>
+    </ul>
+  </div>
+</footer>
