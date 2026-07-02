@@ -12,14 +12,24 @@ import {
   heroCodeBracketSquare,
   heroFolder,
   heroAcademicCap,
-  heroEnvelope
+  heroEnvelope,
+  heroArrowUpRight,
+  heroDocumentText,
+  heroGlobeAlt,
+  heroClock,
+  heroComputerDesktop,
+  heroMapPin
 } from '@ng-icons/heroicons/outline';
+import { diLinkedinPlain } from '@ng-icons/devicon/plain';
+import { diGithubOriginal } from '@ng-icons/devicon/original';
+import { heroDevicePhoneMobileSolid } from '@ng-icons/heroicons/solid';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
     provideIcons({
+      // Heroicons
       heroBars3,
       heroXMark,
       heroHome,
@@ -27,7 +37,18 @@ export const appConfig: ApplicationConfig = {
       heroCodeBracketSquare,
       heroFolder,
       heroAcademicCap,
-      heroEnvelope
+      heroEnvelope,
+      heroArrowUpRight,
+      heroDevicePhoneMobileSolid,
+      heroGlobeAlt,
+      heroClock,
+      heroMapPin,
+      heroComputerDesktop,
+      heroDocumentText,
+
+      // Devicons
+      diLinkedinPlain,
+      diGithubOriginal
     })
   ]
 };

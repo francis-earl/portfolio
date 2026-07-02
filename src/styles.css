@@ -5,6 +5,9 @@
 @theme {
   --font-sans: "Sora", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+  --text-10: 10px;
+  --text-11: 11px;
+  --text-13: 13px;
 }
 
 body {
