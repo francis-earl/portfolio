@@ -1,5 +1,5 @@
 <footer
-  class="mono-text mx-auto flex w-full max-w-248 flex-row flex-wrap items-center justify-between gap-5 border-t border-stone-200 px-4 pt-6 pb-5 font-mono text-xs md:px-8 lg:px-6"
+  class="mono-text sm;pb-5 text-11 mx-auto flex w-full flex-row flex-wrap items-center justify-between gap-4 border-t border-stone-300 px-4 py-6 font-mono sm:pt-6 md:px-8 lg:px-6"
 >
   <div>
     © <time>{{ currentYear }}</time> Francis Earl Fojas. All rights reserved.
@@ -15,24 +15,12 @@
   <div class="flex flex-col items-start gap-2.5 sm:flex-row sm:items-center">
     <p>Built with</p>
     <ul class="flex flex-col items-start gap-2.5 sm:flex-row sm:items-center sm:gap-4">
-      <li class="inline-flex items-center gap-1.5">
-        <img src="logo/angular.svg" alt="" aria-hidden="true" class="h-4.5 w-4.5 sm:h-3.5 sm:w-3.5" /><span
-          >Angular 22</span
-        >
-      </li>
-      <li class="inline-flex items-center gap-1.5">
-        <img
-          src="logo/typescript.svg"
-          alt=""
-          aria-hidden="true"
-          class="h-4.5 w-4.5 sm:h-3.5 sm:w-3.5"
-        /><span>TypeScript 6</span>
-      </li>
-      <li class="inline-flex items-center gap-1.5">
-        <img src="logo/tailwindcss.svg" alt="" aria-hidden="true" class="h-4.5 w-4.5" /><span
-          >Tailwind CSS 4</span
-        >
-      </li>
+      @for(item of techStack; track item.name) {
+        <li class="inline-flex items-center gap-1.5">
+          <ng-icon [name]="item.icon" />
+          <span>{{ item.name }} {{ item.version }}</span>
+        </li>
+      }
     </ul>
   </div>
 </footer>

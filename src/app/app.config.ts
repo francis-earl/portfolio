@@ -21,7 +21,7 @@ import {
   heroMapPin
 } from '@ng-icons/heroicons/outline';
 import { diLinkedinPlain } from '@ng-icons/devicon/plain';
-import { diGithubOriginal } from '@ng-icons/devicon/original';
+import { diAngularOriginal, diGithubOriginal, diTailwindcssOriginal, diTypescriptOriginal } from '@ng-icons/devicon/original';
 import { heroDevicePhoneMobileSolid } from '@ng-icons/heroicons/solid';
 
 export const appConfig: ApplicationConfig = {
@@ -47,6 +47,9 @@ export const appConfig: ApplicationConfig = {
       heroDocumentText,
 
       // Devicons
+      diAngularOriginal,
+      diTypescriptOriginal,
+      diTailwindcssOriginal,
       diLinkedinPlain,
       diGithubOriginal
     })
