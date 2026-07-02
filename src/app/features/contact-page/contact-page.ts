@@ -41,7 +41,7 @@ export class ContactPage {
     },
     {
       icon: 'diGithubOriginal',
-      label: 'Github',
+      label: 'GitHub',
       value: this.github,
       link: `https://${this.github}`,
       isPrimary: false,
