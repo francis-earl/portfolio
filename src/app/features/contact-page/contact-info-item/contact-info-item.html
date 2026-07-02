@@ -1,0 +1,30 @@
+<a
+  [href]="contactInfoItem().link"
+  [attr.target]="contactInfoItem().target"
+  [attr.rel]="contactInfoItem().rel"
+  [class.border-b]="!isLast()"
+  [class.border-stone-200]="!isLast()"
+  class="group flex min-h-20 items-center justify-between py-4 transition-all duration-200 ease-out hover:rounded-lg hover:bg-stone-50"
+>
+  <div class="flex items-center gap-3">
+    <div
+      [class.text-amber-600]="contactInfoItem().isPrimary"
+      class="flex h-9 w-9 items-center justify-center rounded-lg border text-2xl"
+    >
+      <ng-icon [name]="contactInfoItem().icon"></ng-icon>
+    </div>
+    <div>
+      <p class="text-11 mb-0.5 font-mono tracking-wider text-stone-900">
+        {{ contactInfoItem().label }}
+      </p>
+      <p class="text-13 font-medium text-stone-900 transition-colors group-hover:text-amber-700">
+        {{ contactInfoItem().value }}
+      </p>
+    </div>
+  </div>
+  <span
+    class="text-10 text-stone-500 transition-all duration-200 ease-out group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-amber-700"
+  >
+    <ng-icon name="heroArrowUpRight"></ng-icon>
+  </span>
+</a>
