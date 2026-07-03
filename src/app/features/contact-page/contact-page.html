@@ -1,15 +1,15 @@
 <app-page-header [pageHeaderContent]="pageHeaderContent" />
-<section class="mt-10 flex flex-col gap-6 sm:mt-12 sm:flex-row md:mt-8">
-  <section class="flex flex-col gap-2 pr-4 md:flex-1">
+<section class="flex flex-col gap-6 sm:mt-12 sm:flex-row md:mt-8">
+  <section class="flex flex-col gap-2 pr-4 md:flex-1 2xl:flex-1/2">
     <h2 class="text-lg font-bold text-stone-900">Contact Information</h2>
     <address class="not-italic">
       @for (item of contactInfoItems; track item.label; let isLast = $last) {
-        <app-contact-info-item [contactInfoItem]="item" [isLast]="isLast" />
+        <contact-info-item [contactInfoItem]="item" [isLast]="isLast" />
       }
     </address>
   </section>
-  <app-card>
+  <app-card class="md:flex-1 2xl:flex-1/2">
     <h2 class="sr-only">Engagement Details</h2>
-    <app-engagement-details-section />
+    <engagement-details-section />
   </app-card>
 </section>

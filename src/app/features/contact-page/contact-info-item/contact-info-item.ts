@@ -3,7 +3,7 @@ import { NgIcon } from '@ng-icons/core';
 import { ContactInfo } from '../contact-page.model';
 
 @Component({
-  selector: 'app-contact-info-item',
+  selector: 'contact-info-item',
   imports: [NgIcon],
   templateUrl: './contact-info-item.html',
   styleUrl: './contact-info-item.css',
