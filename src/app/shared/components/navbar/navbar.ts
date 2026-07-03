@@ -1,6 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgIcon } from '@ng-icons/core';
+import { NavItem } from './navbar.model';
+import { NAV_ITEMS } from './navbar.data';
 
 @Component({
   selector: 'app-navbar',
@@ -10,14 +12,7 @@ import { NgIcon } from '@ng-icons/core';
   styleUrl: './navbar.css',
 })
 export class Navbar {
-  readonly navItems: { name: string; route: string; icon: string }[] = [
-    { name: 'Home', route: '/home', icon: 'heroHome' },
-    { name: 'Experience', route: '/experience', icon: 'heroBriefcase' },
-    { name: 'Skills', route: '/skills', icon: 'heroCodeBracketSquare' },
-    { name: 'Projects', route: '/projects', icon: 'heroCodeBracketSquare' },
-    { name: 'Learning', route: '/learning', icon: 'heroAcademicCap' },
-    { name: 'Contact', route: '/contact', icon: 'heroEnvelope' },
-  ];
+  readonly navItems: NavItem[] = NAV_ITEMS;
   isOpen = signal(false);
 
   toggleMenu(): void {
