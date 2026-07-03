@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { PageHeaderContent } from '../../../core/models/page-header.model';
+import { PageHeaderContent } from '../models/page-header.model';
 
 @Component({
   selector: 'app-page-header',
