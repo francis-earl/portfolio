@@ -3,11 +3,12 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgIcon } from '@ng-icons/core';
 import { NavItem } from './navbar.model';
 import { NAV_ITEMS } from './navbar.data';
+import { Badge } from '../badge/badge';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, NgIcon],
+  imports: [RouterLink, RouterLinkActive, NgIcon, Badge],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })

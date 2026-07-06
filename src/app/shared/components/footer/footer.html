@@ -12,9 +12,9 @@
     • Updated
     <time [attr.datetime]="buildInfo.buildDate">{{ buildInfo.buildDate | date: 'MMM d, y' }}</time>
   </div>
-  <div class="flex flex-col items-start gap-2.5 sm:flex-row sm:items-center">
+  <div class="flex flex-col items-start gap-3.5 sm:flex-row sm:items-center">
     <p>Built with</p>
-    <ul class="flex flex-col items-start gap-2.5 sm:flex-row sm:items-center sm:gap-4">
+    <ul class="flex flex-col items-start gap-3.5 sm:flex-row sm:items-center sm:gap-5">
       @for(item of techStack; track item.name) {
         <li class="inline-flex items-center gap-1.5">
           <ng-icon [name]="item.icon" />
