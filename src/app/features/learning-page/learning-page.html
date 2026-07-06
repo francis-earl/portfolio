@@ -1,1 +1,32 @@
-<p>learning-page works!</p>
+<app-page-header [pageHeaderContent]="pageHeaderContent" />
+<div class="flex flex-col gap-10">
+  <learning-section
+    [learningHeader]="sectionHeaders.completed"
+    [learningItems]="completedCoursesItems"
+  />
+  <learning-section
+    [learningHeader]="sectionHeaders.certificates"
+    [learningItems]="earnedCertificatesItems"
+  />
+  <learning-section
+    [learningHeader]="sectionHeaders.current"
+    [learningItems]="currentlyLearningItems"
+  />
+  <section class="flex items-center gap-5 rounded-xl border-2 border-dashed border-stone-300 p-5">
+    <span class="rounded-full bg-stone-200 px-3 py-2.5 text-stone-600"
+      ><ng-icon name="tablerNotebook" size="3rem"
+    /></span>
+    <div class="flex flex-col gap-3">
+      <div class="flex flex-col-reverse flex-wrap gap-2 sm:flex-row sm:items-center sm:gap-3">
+        <h2 class="text-lg font-bold text-stone-900">Learning Journal</h2>
+        <app-badge color="orange" ariaLabel="Coming Soon" class="-ml-1 sm:ml-0">
+          Coming Soon
+        </app-badge>
+      </div>
+      <p class="text-sm">
+        A space where I reflect on what I learn, document key takeaways, write code samples, and
+        share references for future me.
+      </p>
+    </div>
+  </section>
+</div>
