@@ -3,6 +3,8 @@ import { RouterLink } from '@angular/router';
 import { BUILD_INFO } from '../../../core/build-info';
 import { DatePipe } from '@angular/common';
 import { NgIcon } from '@ng-icons/core';
+import { TechStackItem } from './footer.model';
+import { TECH_STACK } from './footer.data';
 
 @Component({
   selector: 'app-footer',
@@ -13,9 +15,5 @@ import { NgIcon } from '@ng-icons/core';
 export class Footer {
   readonly currentYear: number = new Date().getFullYear();
   readonly buildInfo = BUILD_INFO;
-  readonly techStack: { name: string; version: string; icon: string }[] = [
-    { name: 'Angular', version: '22', icon: 'diAngularOriginal' },
-    { name: 'TypeScript', version: '6', icon: 'diTypescriptOriginal' },
-    { name: 'Tailwind CSS', version: '4', icon: 'diTailwindcssOriginal' },
-  ];
+  readonly techStack: TechStackItem[] = TECH_STACK;
 }

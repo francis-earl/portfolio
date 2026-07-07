@@ -1,0 +1,16 @@
+<section class="mb-10 flex flex-col gap-3 sm:mb-12 md:mb-8">
+  <p class="text-11 font-mono tracking-wider text-stone-500 uppercase">
+    {{ pageHeaderContent().label }}
+  </p>
+  <h1 class="text-4xl font-bold text-amber-700">{{ pageHeaderContent().title }}</h1>
+  <div>
+    <p class="max-w-3xl">
+      {{ pageHeaderContent().description1 }}
+    </p>
+    @if(pageHeaderContent().description2) {
+      <p class="mt-2 max-w-3xl">
+        {{ pageHeaderContent().description2 }}
+      </p>
+    }
+  </div>
+</section>

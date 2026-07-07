@@ -18,11 +18,19 @@ import {
   heroGlobeAlt,
   heroClock,
   heroComputerDesktop,
-  heroMapPin
+  heroMapPin,
+  heroWrenchScrewdriver,
+  heroArrowTopRightOnSquare,
 } from '@ng-icons/heroicons/outline';
 import { diLinkedinPlain } from '@ng-icons/devicon/plain';
 import { diAngularOriginal, diGithubOriginal, diTailwindcssOriginal, diTypescriptOriginal } from '@ng-icons/devicon/original';
 import { heroDevicePhoneMobileSolid } from '@ng-icons/heroicons/solid';
+import {
+  simpleHackerrank,
+  simpleAnthropic,
+  simpleUdemy,
+} from '@ng-icons/simple-icons';
+import { tablerAward, tablerBook, tablerCalendar, tablerCalendarCheck, tablerFileCode, tablerNotebook, tablerSchool, tablerTargetArrow } from '@ng-icons/tabler-icons';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -34,6 +42,7 @@ export const appConfig: ApplicationConfig = {
       heroXMark,
       heroHome,
       heroBriefcase,
+      heroWrenchScrewdriver,
       heroCodeBracketSquare,
       heroFolder,
       heroAcademicCap,
@@ -45,13 +54,29 @@ export const appConfig: ApplicationConfig = {
       heroMapPin,
       heroComputerDesktop,
       heroDocumentText,
+      heroArrowTopRightOnSquare,
 
       // Devicons
       diAngularOriginal,
       diTypescriptOriginal,
       diTailwindcssOriginal,
       diLinkedinPlain,
-      diGithubOriginal
+      diGithubOriginal,
+
+      // Simple Icons
+      simpleHackerrank,
+      simpleAnthropic,
+      simpleUdemy,
+
+      // Tabler Icons
+      tablerSchool,
+      tablerAward,
+      tablerBook,
+      tablerTargetArrow,
+      tablerFileCode,
+      tablerCalendarCheck,
+      tablerCalendar,
+      tablerNotebook
     })
   ]
 };

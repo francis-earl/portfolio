@@ -1,0 +1,43 @@
+@let item = learningItem();
+@let footer = sectionFooter();
+
+<div class="flex items-center gap-3">
+  <span><ng-icon [name]="learningItemIcon()" size="2rem" /></span>
+  <p class="text-sm font-medium">{{ item.provider }}</p>
+</div>
+<div class="mt-2 mb-5 flex flex-col gap-2">
+  <h3 class="font-bold text-stone-900">{{ item.title }}</h3>
+  <p class="text-sm leading-5.5">{{ item.description }}</p>
+</div>
+<div
+  class="mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-stone-200 pt-4"
+>
+  <div class="flex gap-2">
+    <span><ng-icon [name]="footer.icon" /></span>
+    <p class="flex gap-1.5 text-sm">
+      <span>
+        {{ footer.label }}
+      </span>
+      <span>{{ footer.value }}</span>
+    </p>
+  </div>
+  @if (item.status === 'in progress') {
+    <div class="flex gap-2">
+      <span><ng-icon name="tablerTargetArrow" /></span>
+      <p class="text-sm">
+        <span class="pr-0.5"> Goal: </span>
+        Complete by {{ item.targetDate }}
+      </p>
+    </div>
+  }
+  <a
+    [href]="item.url"
+    [attr.aria-label]="`${footer.action} (opens in a new tab)`"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex items-center justify-center gap-2 rounded-lg border border-amber-400 bg-white px-4 py-2.5 text-sm font-medium text-amber-700 transition-all duration-200 hover:border-amber-500 hover:bg-amber-50 focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-95"
+  >
+    {{ footer.action }}
+    <ng-icon name="heroArrowTopRightOnSquare" size="16"> </ng-icon>
+  </a>
+</div>
