@@ -8,10 +8,8 @@ import { PageHeader } from '../../shared/components/page-header/page-header';
 import { CONTACT_INFO_ITEMS, PAGE_HEADER_CONTENT } from './contact-page.data';
 
 @Component({
-  selector: 'app-contact-page',
   imports: [ContactInfoItem, EngagementDetailsSection, Card, PageHeader],
   templateUrl: './contact-page.html',
-  styleUrl: './contact-page.css',
 })
 export class ContactPage {
   readonly pageHeaderContent: PageHeaderContent = PAGE_HEADER_CONTENT;

@@ -8,16 +8,13 @@ import {
   LEARNING_ITEMS,
   PAGE_HEADER_CONTENT,
 } from './learning-page.data';
-import { LearningHeader, LearningItem } from './learning-page.model';
 import { LearningSection } from './learning-section/learning-section';
 import { NgIcon } from '@ng-icons/core';
 import { Badge } from '../../shared/components/badge/badge';
 
 @Component({
-  selector: 'app-learning-page',
   imports: [PageHeader, LearningSection, NgIcon, Badge],
   templateUrl: './learning-page.html',
-  styleUrl: './learning-page.css',
 })
 export class LearningPage {
   readonly pageHeaderContent: PageHeaderContent = PAGE_HEADER_CONTENT;

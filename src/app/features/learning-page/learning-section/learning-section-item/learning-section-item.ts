@@ -7,7 +7,6 @@ import { PROVIDER_ICONS } from '../../learning-page.data';
   selector: 'learning-section-item',
   imports: [NgIcon],
   templateUrl: './learning-section-item.html',
-  styleUrl: './learning-section-item.css',
 })
 export class LearningSectionItem {
   readonly learningItem = input.required<LearningItem>();

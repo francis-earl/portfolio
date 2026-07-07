@@ -5,7 +5,6 @@ import { PageHeaderContent } from '../models/page-header.model';
   selector: 'app-page-header',
   imports: [],
   templateUrl: './page-header.html',
-  styleUrl: './page-header.css',
 })
 export class PageHeader {
   pageHeaderContent = input.required<PageHeaderContent>();

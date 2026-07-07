@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomePage } from './features/home-page/home-page';
-import { WorkExperiencePage } from './features/work-experience-page/work-experience-page';
+import { ExperiencePage } from './features/experience-page/experience-page';
 import { SkillsPage } from './features/skills-page/skills-page';
 import { ProjectsPage } from './features/projects-page/projects-page';
 import { LearningPage } from './features/learning-page/learning-page';
@@ -19,7 +19,7 @@ export const routes: Routes = [
   },
   {
     path: 'experience',
-    component: WorkExperiencePage
+    component: ExperiencePage
   },
   {
     path: 'skills',

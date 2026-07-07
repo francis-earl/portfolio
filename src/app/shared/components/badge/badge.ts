@@ -5,7 +5,6 @@ import { NgClass } from '@angular/common';
   selector: 'app-badge',
   imports: [NgClass],
   templateUrl: './badge.html',
-  styleUrl: './badge.css',
 })
 export class Badge {
   color = input.required<'green' | 'orange'>();

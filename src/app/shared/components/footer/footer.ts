@@ -10,7 +10,6 @@ import { TECH_STACK } from './footer.data';
   selector: 'app-footer',
   imports: [RouterLink, DatePipe, NgIcon],
   templateUrl: './footer.html',
-  styleUrl: './footer.css',
 })
 export class Footer {
   readonly currentYear: number = new Date().getFullYear();
