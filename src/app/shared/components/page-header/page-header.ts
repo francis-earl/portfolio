@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { PageHeaderContent } from '../models/page-header.model';
+import { PageHeaderContent } from '../../models/page-header.model';
 
 @Component({
   selector: 'app-page-header',
@@ -7,5 +7,5 @@ import { PageHeaderContent } from '../models/page-header.model';
   templateUrl: './page-header.html',
 })
 export class PageHeader {
-  pageHeaderContent = input.required<PageHeaderContent>();
+  readonly pageHeaderContent = input.required<PageHeaderContent>();
 }

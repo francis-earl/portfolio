@@ -1,4 +1,4 @@
-import { PageHeaderContent } from '../../shared/components/models/page-header.model';
+import { PageHeaderContent } from '../../shared/models/page-header.model';
 import { LearningHeader, LearningItem } from './learning-page.model';
 
 export const PAGE_HEADER_CONTENT: PageHeaderContent = {

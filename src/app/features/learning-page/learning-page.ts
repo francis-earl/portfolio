@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PageHeaderContent } from '../../shared/components/models/page-header.model';
+import { PageHeaderContent } from '../../shared/models/page-header.model';
 import { PageHeader } from '../../shared/components/page-header/page-header';
 import {
   COMPLETED_COURSES_HEADER,

@@ -7,6 +7,6 @@ import { NgClass } from '@angular/common';
   templateUrl: './badge.html',
 })
 export class Badge {
-  color = input.required<'green' | 'orange'>();
-  ariaLabel = input<string>();
+  readonly color = input.required<'green' | 'orange'>();
+  readonly ariaLabel = input<string>();
 }
