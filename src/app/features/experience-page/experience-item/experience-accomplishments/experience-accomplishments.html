@@ -1,0 +1,11 @@
+@let exp = experience();
+
+<ul class="space-y-3 text-sm leading-normal text-stone-900">
+  @for (achievement of exp.achievements; track $index) {
+    <li
+      class="relative pl-5 before:absolute before:top-[0.4rem] before:left-0 before:h-1.75 before:w-1.75 before:bg-amber-500 before:content-[''] before:[clip-path:polygon(0_0,100%_50%,0_100%)]"
+    >
+      {{ achievement }}
+    </li>
+  }
+</ul>

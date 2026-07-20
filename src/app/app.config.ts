@@ -21,6 +21,7 @@ import {
   heroMapPin,
   heroWrenchScrewdriver,
   heroArrowTopRightOnSquare,
+  heroCalendarDateRange,
 } from '@ng-icons/heroicons/outline';
 import { diLinkedinPlain } from '@ng-icons/devicon/plain';
 import { diAngularOriginal, diGithubOriginal, diTailwindcssOriginal, diTypescriptOriginal } from '@ng-icons/devicon/original';
@@ -55,6 +56,7 @@ export const appConfig: ApplicationConfig = {
       heroComputerDesktop,
       heroDocumentText,
       heroArrowTopRightOnSquare,
+      heroCalendarDateRange,
 
       // Devicons
       diAngularOriginal,
