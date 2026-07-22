@@ -15,7 +15,7 @@ export const WORK_EXPERIENCES: Experience[] = [
   {
     id: 4,
     startDate: 'Jan 2025',
-    //     endDate: 'Jul 2026',
+    endDate: 'Jul 2026',
     logo: 'logo/macquarie.jpg',
     company: 'Macquarie Group Services (Philippines), Inc.',
     website: 'https://www.macquarie.com/ph/en.html',
