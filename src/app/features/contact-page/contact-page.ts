@@ -12,6 +12,6 @@ import { CONTACT_INFO_ITEMS, PAGE_HEADER_CONTENT } from './contact-page.data';
   templateUrl: './contact-page.html',
 })
 export class ContactPage {
-  readonly pageHeaderContent: PageHeaderContent = PAGE_HEADER_CONTENT;
-  readonly contactInfoItems: ContactInfo[] = CONTACT_INFO_ITEMS;
+  protected readonly pageHeaderContent: PageHeaderContent = PAGE_HEADER_CONTENT;
+  protected readonly contactInfoItems: ContactInfo[] = CONTACT_INFO_ITEMS;
 }

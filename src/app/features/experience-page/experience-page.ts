@@ -12,6 +12,6 @@ import { ExperienceItem } from './experience-item/experience-item';
   styleUrl: './experience-page.css',
 })
 export class ExperiencePage {
-  readonly pageHeaderContent: PageHeaderContent = PAGE_HEADER_CONTENT;
-  readonly workExperiences: Experience[] = WORK_EXPERIENCES;
+  protected readonly pageHeaderContent: PageHeaderContent = PAGE_HEADER_CONTENT;
+  protected readonly workExperiences: Experience[] = WORK_EXPERIENCES;
 }

@@ -13,8 +13,8 @@ import { Badge } from '../badge/badge';
   styleUrl: './navbar.css',
 })
 export class Navbar {
-  readonly navItems: NavItem[] = NAV_ITEMS;
-  isOpen = signal(false);
+  protected readonly navItems: NavItem[] = NAV_ITEMS;
+  protected isOpen = signal(false);
 
   toggleMenu(): void {
     this.isOpen.update((open) => !open);

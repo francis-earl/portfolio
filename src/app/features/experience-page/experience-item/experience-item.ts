@@ -12,10 +12,10 @@ import { NgIcon } from '@ng-icons/core';
   templateUrl: './experience-item.html',
 })
 export class ExperienceItem {
-  experience = input.required<Experience>();
-  isLast = input<boolean>(false);
+  readonly experience = input.required<Experience>();
+  readonly isLast = input<boolean>(false);
 
-  timeline = computed(
+  protected readonly timeline = computed(
     () => `${this.experience().startDate}
   -
   ${this.experience().endDate ?? 'Present'}`,
