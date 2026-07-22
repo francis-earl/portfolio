@@ -1,4 +1,4 @@
-import { PageHeaderContent } from '../../shared/components/models/page-header.model';
+import { PageHeaderContent } from '../../shared/models/page-header.model';
 import { ContactInfo } from './contact-page.model';
 
 const EMAIL: string = 'francisearl.fojas@gmail.com';

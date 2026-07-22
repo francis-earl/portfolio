@@ -1,0 +1,4 @@
+<app-page-header [pageHeaderContent]="pageHeaderContent" />
+@for (item of workExperiences; track item.id; let isLast = $last) {
+  <experience-item [experience]="item" [isLast]="isLast" />
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PageHeaderContent } from '../../shared/components/models/page-header.model';
+import { PageHeaderContent } from '../../shared/models/page-header.model';
 import { PageHeader } from '../../shared/components/page-header/page-header';
 import {
   COMPLETED_COURSES_HEADER,
@@ -8,35 +8,32 @@ import {
   LEARNING_ITEMS,
   PAGE_HEADER_CONTENT,
 } from './learning-page.data';
-import { LearningHeader, LearningItem } from './learning-page.model';
 import { LearningSection } from './learning-section/learning-section';
 import { NgIcon } from '@ng-icons/core';
 import { Badge } from '../../shared/components/badge/badge';
 
 @Component({
-  selector: 'app-learning-page',
   imports: [PageHeader, LearningSection, NgIcon, Badge],
   templateUrl: './learning-page.html',
-  styleUrl: './learning-page.css',
 })
 export class LearningPage {
-  readonly pageHeaderContent: PageHeaderContent = PAGE_HEADER_CONTENT;
+  protected readonly pageHeaderContent: PageHeaderContent = PAGE_HEADER_CONTENT;
 
-  readonly sectionHeaders = {
+  protected readonly sectionHeaders = {
     completed: COMPLETED_COURSES_HEADER,
     certificates: EARNED_CERTIFICATES_HEADER,
     current: CURRENTLY_LEARNING_HEADER,
   };
 
-  readonly completedCoursesItems = LEARNING_ITEMS.filter(
+  protected readonly completedCoursesItems = LEARNING_ITEMS.filter(
     (item) => item.type === 'course' && item.status === 'completed',
   ).sort(this.sortByDateDesc((item) => item.completedDate));
 
-  readonly earnedCertificatesItems = LEARNING_ITEMS.filter(
+  protected readonly earnedCertificatesItems = LEARNING_ITEMS.filter(
     (item) => item.type === 'certificate' && item.status === 'completed',
   ).sort(this.sortByDateDesc((item) => item.completedDate));
 
-  readonly currentlyLearningItems = LEARNING_ITEMS.filter(
+  protected readonly currentlyLearningItems = LEARNING_ITEMS.filter(
     (item) => item.status === 'in progress',
   ).sort(this.sortByDateDesc((item) => item.startDate));
 

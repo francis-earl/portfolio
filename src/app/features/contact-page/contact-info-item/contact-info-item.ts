@@ -6,7 +6,6 @@ import { ContactInfo } from '../contact-page.model';
   selector: 'contact-info-item',
   imports: [NgIcon],
   templateUrl: './contact-info-item.html',
-  styleUrl: './contact-info-item.css',
 })
 export class ContactInfoItem {
   contactInfoItem = input.required<ContactInfo>();

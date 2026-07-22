@@ -7,16 +7,15 @@ import { PROVIDER_ICONS } from '../../learning-page.data';
   selector: 'learning-section-item',
   imports: [NgIcon],
   templateUrl: './learning-section-item.html',
-  styleUrl: './learning-section-item.css',
 })
 export class LearningSectionItem {
   readonly learningItem = input.required<LearningItem>();
 
-  readonly learningItemIcon = computed<string>(
+  protected readonly learningItemIcon = computed<string>(
     () => PROVIDER_ICONS[this.learningItem().provider.toLowerCase()] ?? 'tablerFileCode',
   );
 
-  readonly sectionFooter = computed<LearningFooter>(() => {
+  protected readonly sectionFooter = computed<LearningFooter>(() => {
     const item = this.learningItem();
 
     if (item.status === 'completed') {

@@ -23,7 +23,7 @@
         <h1 class="text-xl font-bold tracking-wide text-stone-900 lg:text-2xl">Francis Earl</h1>
 
         <p class="mt-2 font-mono text-sm text-stone-500">Software Engineer</p>
-        <app-badge color="green" ariaLabel="Currently open to work" class="mt-1">
+        <app-badge color="green" ariaLabel="Currently open to work" class="mt-1 text-xs">
           <span class="h-2 w-2 rounded-full bg-green-500" aria-hidden="true"></span>
           <span>Open to Work</span>
         </app-badge>
@@ -47,7 +47,7 @@
       <a
         [routerLink]="item.route"
         routerLinkActive="active-link bg-amber-50 text-amber-700 font-semibold"
-        class="group relative flex items-center gap-4 px-6 py-3 font-mono text-stone-700 transition-colors duration-200 hover:bg-amber-50 hover:text-amber-700"
+        class="focus-ring relative flex items-center gap-4 px-6 py-3 font-mono text-stone-700 transition-colors duration-200 hover:bg-amber-50 hover:text-amber-700"
         (click)="closeMenu()"
       >
         <span class="indicator absolute inset-y-2 left-0 w-1 rounded-r-full bg-amber-700"></span>

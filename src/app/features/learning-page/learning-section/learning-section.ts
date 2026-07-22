@@ -8,7 +8,6 @@ import { LearningHeader, LearningItem } from '../learning-page.model';
   selector: 'learning-section',
   imports: [LearningSectionHeader, Card, LearningSectionItem],
   templateUrl: './learning-section.html',
-  styleUrl: './learning-section.css',
   host: {
     class: 'flex flex-col gap-4.5'
   }

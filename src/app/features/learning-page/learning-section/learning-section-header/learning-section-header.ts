@@ -6,7 +6,6 @@ import { LearningHeader } from '../../learning-page.model';
   selector: 'learning-section-header',
   imports: [NgIcon],
   templateUrl: './learning-section-header.html',
-  styleUrl: './learning-section-header.css',
 })
 export class LearningSectionHeader {
   headerDetails = input.required<LearningHeader>();
