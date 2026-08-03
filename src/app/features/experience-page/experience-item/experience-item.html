@@ -22,12 +22,14 @@
     ></div>
   </div>
   <app-card class="mt-2 mb-5 md:mt-5" additionalClasses="flex flex-col gap-y-5">
-    <experience-header [experience]="exp" />
-    <hr class="border-stone-200" />
-    <div class="ml-4 flex max-w-2xl flex-col gap-y-6 sm:ml-20">
-      <experience-accomplishments [experience]="exp" />
-      <app-tags [items]="exp.techStack" class="pb-1" />
-    </div>
+    <section>
+      <experience-header [experience]="exp" />
+      <hr class="border-stone-200" />
+      <div class="ml-4 flex max-w-2xl flex-col gap-y-6 sm:ml-20">
+        <experience-accomplishments [experience]="exp" />
+        <app-tags [items]="exp.techStack" class="pb-1" />
+      </div>
+    </section>
   </app-card>
 </article>
 @if (!isLast()) {

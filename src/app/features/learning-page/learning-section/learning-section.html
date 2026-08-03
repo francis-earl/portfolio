@@ -2,7 +2,9 @@
 <div class="grid gap-6" [class.md:grid-cols-2]="learningItems().length > 1">
   @for (item of learningItems(); track item.title) {
     <app-card [hasHoverStyles]="true">
-      <learning-section-item [learningItem]="item" />
+      <section>
+        <learning-section-item [learningItem]="item" />
+      </section>
     </app-card>
   }
 </div>
