@@ -1,7 +1,7 @@
 <app-page-header [pageHeaderContent]="pageHeaderContent" />
 <div class="flex flex-col gap-6 sm:mt-12 sm:flex-row md:mt-8">
   <section class="flex flex-col gap-2 pr-4 md:flex-1 2xl:flex-1/2">
-    <h2 class="text-xl font-bold text-stone-900">Contact Information</h2>
+    <h2 class="section-heading">Contact Information</h2>
     <address class="not-italic">
       @for (item of contactInfoItems; track item.label; let isLast = $last) {
         <contact-info-item [contactInfoItem]="item" [isLast]="isLast" />
@@ -9,7 +9,9 @@
     </address>
   </section>
   <app-card class="my-2 font-mono md:flex-1 2xl:flex-1/2">
-    <h2 class="sr-only">Engagement Details</h2>
-    <engagement-details-section />
+    <section>
+      <h2 class="sr-only">Engagement Details</h2>
+      <contact-engagement-details-section />
+    </section>
   </app-card>
 </div>
