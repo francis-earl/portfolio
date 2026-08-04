@@ -1,0 +1,15 @@
+@for (filter of filters(); track filter) {
+  <button
+    type="button"
+    (click)="onClickFilter(filter)"
+    [class]="
+      selectedFilter() === filter
+        ? 'border-amber-500 bg-white text-amber-600 shadow-sm'
+        : 'border-stone-200 text-stone-700 hover:border-stone-400 hover:bg-stone-50'
+    "
+    [attr.aria-pressed]="selectedFilter() === filter"
+    class="interactive-pressable cursor-pointer rounded-lg border px-5 py-2 font-mono text-xs font-medium transition-all duration-200"
+  >
+    {{ filter }}
+  </button>
+}

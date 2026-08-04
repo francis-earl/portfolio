@@ -1,0 +1,17 @@
+<section class="flex flex-wrap gap-3.5">
+  <h2 class="sr-only">Statistics</h2>
+  @for (stat of stats(); track stat.field) {
+    <app-card
+      class="w-full sm:w-44"
+      additionalClasses="flex items-center gap-2.5 sm:flex-col sm:text-center sm:whitespace-pre-line sm:gap-2"
+    >
+      <span class="mt-1 text-amber-600 sm:mt-0">
+        <ng-icon [name]="stat.icon" size="2rem" />
+      </span>
+      <p class="mt-0.5 ml-3 font-mono text-2xl font-bold text-stone-900 sm:ml-0 sm:text-3xl">
+        {{ stat.value }}
+      </p>
+      <p class="mt-0.5 ml-1 text-stone-700 sm:mt-0 sm:ml-0">{{ stat.field }}</p>
+    </app-card>
+  }
+</section>

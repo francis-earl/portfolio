@@ -1,0 +1,28 @@
+@let legend = expertiseLevel();
+
+<span>
+  <ng-icon name="heroInformationCircle" size="2.25rem" />
+</span>
+<div class="flex flex-col gap-4 md:gap-3">
+  <p class="text-sm">{{ legend.description }}</p>
+  <ul class="flex list-none flex-col gap-3 p-0 md:flex-row md:gap-10">
+    @for (level of legend.levels; track level.name) {
+      <li class="flex gap-3">
+        <div class="flex flex-row-reverse gap-0.5" aria-label="{{ level.rating }} out of 5 stars">
+          @for (star of stars; track star) {
+            @if (star <= level.rating) {
+              <span class="size-4 text-amber-400">
+                <ng-icon name="heroStarSolid" />
+              </span>
+            } @else {
+              <span class="size-4 text-amber-400">
+                <ng-icon name="heroStar" />
+              </span>
+            }
+          }
+        </div>
+        <p class="text-sm font-medium">{{ level.name }}</p>
+      </li>
+    }
+  </ul>
+</div>

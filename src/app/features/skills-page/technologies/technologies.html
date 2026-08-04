@@ -1,0 +1,6 @@
+<section class="flex flex-col gap-3.5">
+  <skills-section-header [header]="technologiesHeader()" />
+  <skills-category-filters [filters]="categories()" (onSelectFilter)="onFilterSelected($event)" />
+  <skills-technology-list [technologies]="technologies()" [activeFilter]="activeFilter()" />
+  <skills-expertise-legend [expertiseLevel]="expertiseLevel()" />
+</section>

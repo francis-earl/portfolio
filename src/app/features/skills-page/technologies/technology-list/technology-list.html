@@ -1,0 +1,36 @@
+<ul class="flex list-none flex-wrap items-center justify-center gap-3 p-0 sm:justify-start">
+  @for (tech of selectedTechnologies(); track tech.id) {
+    <li>
+      <app-card
+        additionalClasses="flex w-32 flex-col items-center gap-3 text-center xl:w-35 2xl:w-33"
+      >
+        @if (tech.icon.includes('logo')) {
+          <img [src]="tech.icon" alt="" class="h-8 w-8" />
+        } @else {
+          <ng-icon [name]="tech.icon" size="2rem" />
+        }
+        <p class="text-13 mt-0.5 flex h-6 items-center justify-center leading-4.5 font-bold">
+          {{ tech.name }}
+        </p>
+
+        <div class="mt-0.5 flex flex-row-reverse justify-center gap-0.5">
+          @for (star of stars; track star) {
+            @if (star <= tech.rating) {
+              <span class="size-4 text-amber-400">
+                <ng-icon name="heroStarSolid" />
+              </span>
+            } @else {
+              <span class="size-4 text-amber-400">
+                <ng-icon name="heroStar" />
+              </span>
+            }
+          }
+        </div>
+
+        <p class="text-11 font-mono text-stone-700">
+          {{ tech.years | duration: tech.hasPlusYears }}
+        </p>
+      </app-card>
+    </li>
+  }
+</ul>

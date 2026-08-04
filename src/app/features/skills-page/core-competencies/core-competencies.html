@@ -1,0 +1,18 @@
+<section class="flex flex-col gap-3.5">
+  <skills-section-header [header]="competenciesHeader()" />
+  <ul class="flex list-none flex-wrap gap-3 p-0">
+    @for (competency of competencies(); track competency.id) {
+      <li>
+        <app-card additionalClasses="flex gap-4">
+          <span class="text-amber-600">
+            <ng-icon [name]="competency.icon" size="2.75rem" />
+          </span>
+          <div class="flex flex-col gap-2 md:w-80 xl:w-88 2xl:w-70">
+            <p class="font-bold text-stone-900">{{ competency.name }}</p>
+            <p class="text-sm leading-5.5">{{ competency.description }}</p>
+          </div>
+        </app-card>
+      </li>
+    }
+  </ul>
+</section>
