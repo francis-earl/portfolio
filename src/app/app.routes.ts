@@ -11,15 +11,15 @@ export const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
-    component: HomePage
+    component: HomePage,
   },
   {
     path: 'experience',
-    component: ExperiencePage
+    component: ExperiencePage,
   },
   {
     path: 'skills',
@@ -27,18 +27,22 @@ export const routes: Routes = [
   },
   {
     path: 'projects',
-    component: ProjectsPage
+    component: ProjectsPage,
   },
   {
     path: 'learning',
-    component: LearningPage
+    component: LearningPage,
   },
   {
     path: 'contact',
-    component: ContactPage
+    component: ContactPage,
   },
   {
     path: 'changelog',
-    component: ChangelogPage
-  }
+    component: ChangelogPage,
+  },
+  {
+    path: '**',
+    loadComponent: () => import('./features/not-found-page/not-found-page').then((c) => c.NotFoundPage),
+  },
 ];
