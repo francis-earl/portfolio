@@ -24,6 +24,7 @@ import {
   heroCalendarDateRange,
   heroStar,
   heroInformationCircle,
+  heroArrowSmallLeft,
 } from '@ng-icons/heroicons/outline';
 import { diJavaPlain, diLinkedinPlain } from '@ng-icons/devicon/plain';
 import { diAngularOriginal, diArgocdOriginal, diBambooOriginal, diBitbucketOriginal, diBootstrapOriginal, diCss3Original, diExpressOriginal, diGithubactionsOriginal, diGithubOriginal, diGitOriginal, diHtml5Original, diJasmineOriginal, diJavaOriginal, diJavascriptOriginal, diJunitOriginalWordmark, diMysqlOriginal, diOpenapiOriginal, diPostgresqlOriginal, diReactOriginal, diRxjsOriginal, diSalesforceOriginal, diSpringOriginal, diTailwindcssOriginal, diTypescriptOriginal } from '@ng-icons/devicon/original';
@@ -62,6 +63,7 @@ export const appConfig: ApplicationConfig = {
       heroStar,
       heroStarSolid,
       heroInformationCircle,
+      heroArrowSmallLeft,
 
       // Devicons
       diAngularOriginal,
@@ -114,7 +116,7 @@ export const appConfig: ApplicationConfig = {
       tablerBulb,
       tablerCalendarCode,
       tablerCode,
-      tablerServerBolt
+      tablerServerBolt,
     })
   ]
 };
