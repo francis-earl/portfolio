@@ -2,10 +2,10 @@ import { Routes } from '@angular/router';
 import { HomePage } from './features/home-page/home-page';
 import { ExperiencePage } from './features/experience-page/experience-page';
 import { SkillsPage } from './features/skills-page/skills-page';
-import { ProjectsPage } from './features/projects-page/projects-page';
 import { LearningPage } from './features/learning-page/learning-page';
 import { ContactPage } from './features/contact-page/contact-page';
 import { ChangelogPage } from './features/changelog-page/changelog-page';
+import { ProjectsLandingPage } from './features/projects-pages/landing-page/landing-page';
 
 export const routes: Routes = [
   {
@@ -27,7 +27,7 @@ export const routes: Routes = [
   },
   {
     path: 'projects',
-    component: ProjectsPage,
+    component: ProjectsLandingPage,
   },
   {
     path: 'learning',
