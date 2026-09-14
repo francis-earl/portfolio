@@ -34,7 +34,7 @@ import {
   simpleAnthropic,
   simpleUdemy,
 } from '@ng-icons/simple-icons';
-import { tablerAward, tablerBook, tablerBrandGithub, tablerBulb, tablerCalendar, tablerCalendarCheck, tablerFileCode, tablerCalendarCode, tablerCode, tablerCodeDots, tablerDeviceDesktopCode, tablerNotebook, tablerRocket, tablerSchool, tablerServerBolt, tablerShieldCheck, tablerStack2, tablerTargetArrow, tablerFlask } from '@ng-icons/tabler-icons';
+import { tablerAward, tablerBook, tablerBrandGithub, tablerBulb, tablerCalendar, tablerCalendarCheck, tablerFileCode, tablerCalendarCode, tablerCode, tablerCodeDots, tablerDeviceDesktopCode, tablerNotebook, tablerRocket, tablerSchool, tablerServerBolt, tablerShieldCheck, tablerStack2, tablerTargetArrow, tablerFlask, tablerWorldCode } from '@ng-icons/tabler-icons';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -118,6 +118,7 @@ export const appConfig: ApplicationConfig = {
       tablerCode,
       tablerServerBolt,
       tablerFlask,
+      tablerWorldCode,
     })
   ]
 };

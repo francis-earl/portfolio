@@ -1,3 +1,4 @@
+import { ComingSoonSectionContent } from '../../shared/models/coming-soon-section.model';
 import { PageHeaderContent } from '../../shared/models/page-header.model';
 import { LearningHeader, LearningItem } from './learning-page.model';
 
@@ -19,6 +20,12 @@ export const EARNED_CERTIFICATES_HEADER: LearningHeader = {
 
 export const CURRENTLY_LEARNING_HEADER: LearningHeader = {
   title: 'Currently Learning',
+  icon: 'tablerBook',
+};
+
+export const LEARNING_JOURNAL_SECTION: ComingSoonSectionContent = {
+  title: 'Learning Journal',
+  description: `A space where I reflect on what I learn, document key takeaways, write code samples, and share references for future me.`,
   icon: 'tablerBook',
 };
 

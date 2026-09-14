@@ -1,1 +1,18 @@
-<p>coming-soon-section works!</p>
+<section class="flex items-center gap-5 rounded-xl border-2 border-dashed border-stone-300 p-5">
+  <span class="rounded-full bg-stone-200 px-3 py-2.5 text-stone-600"
+    ><ng-icon [name]="content().icon" size="3rem"
+  /></span>
+  <div class="flex flex-col gap-3">
+    <div class="flex flex-col-reverse flex-wrap gap-2 sm:flex-row sm:items-center sm:gap-3">
+      <h2 class="text-lg font-bold text-stone-900">
+        {{ content().title }}
+      </h2>
+      <app-badge color="orange" ariaLabel="Coming Soon" class="-ml-1 text-xs sm:ml-0">
+        Coming Soon
+      </app-badge>
+    </div>
+    <p class="text-sm">
+      {{ content().description }}
+    </p>
+  </div>
+</section>

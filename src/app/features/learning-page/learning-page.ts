@@ -6,14 +6,15 @@ import {
   CURRENTLY_LEARNING_HEADER,
   EARNED_CERTIFICATES_HEADER,
   LEARNING_ITEMS,
+  LEARNING_JOURNAL_SECTION,
   PAGE_HEADER_CONTENT,
 } from './learning-page.data';
 import { LearningSection } from './learning-section/learning-section';
-import { NgIcon } from '@ng-icons/core';
-import { Badge } from '../../shared/components/badge/badge';
+import { ComingSoonSectionContent } from '../../shared/models/coming-soon-section.model';
+import { ComingSoonSection } from '../../shared/components/coming-soon-section/coming-soon-section';
 
 @Component({
-  imports: [PageHeader, LearningSection, NgIcon, Badge],
+  imports: [PageHeader, LearningSection, ComingSoonSection],
   templateUrl: './learning-page.html',
 })
 export class LearningPage {
@@ -24,6 +25,8 @@ export class LearningPage {
     certificates: EARNED_CERTIFICATES_HEADER,
     current: CURRENTLY_LEARNING_HEADER,
   };
+
+  protected readonly learningJournalSection: ComingSoonSectionContent = LEARNING_JOURNAL_SECTION;
 
   protected readonly completedCoursesItems = LEARNING_ITEMS.filter(
     (item) => item.type === 'course' && item.status === 'completed',
