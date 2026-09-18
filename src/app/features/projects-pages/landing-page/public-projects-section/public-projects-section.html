@@ -1,3 +1,6 @@
 <section class="flex flex-col gap-3.5">
   <proj-section-header [header]="publicProjectsHeader()" />
+  @for (project of publicProjects(); track project.id) {
+    <proj-section-card [project]="project" />
+  }
 </section>

@@ -1,0 +1,104 @@
+@let proj = project();
+
+<app-card additionalClasses="flex flex-wrap gap-5">
+  <div class="flex flex-wrap gap-6">
+    <div class="flex flex-1">
+      <img
+        [src]="proj.thumbnail"
+        [alt]="`${proj.title} thumbnail`"
+        class="h-full w-full rounded-lg border border-stone-200 object-contain"
+      />
+    </div>
+
+    <div class="flex flex-1 flex-col gap-2 pt-2 pr-4">
+      <h3 class="section-heading">{{ proj.title }}</h3>
+      <p class="text-sm leading-5.5">
+        @if (proj.type === 'enterprise') {
+          {{ proj.summarizedOverview }}
+        } @else if (proj.type === 'public') {
+          {{ proj.overview }}
+        }
+      </p>
+
+      <hr class="my-3 border-stone-200" />
+
+      <div class="flex flex-col flex-wrap gap-5 text-sm">
+        <div class="flex gap-4">
+          @if (proj.type === 'enterprise') {
+          } @else if (proj.type === 'public') {
+            <div class="text-amber-600">
+              <ng-icon name="tablerUserCode" size="30" />
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <p class="font-bold text-stone-900">Role</p>
+              <p>{{ proj.role }}</p>
+            </div>
+          }
+        </div>
+
+        <div class="flex gap-4">
+          @if (proj.type === 'enterprise') {
+          } @else if (proj.type === 'public') {
+            <div class="pl-0.5 text-amber-600">
+              <ng-icon name="tablerPuzzle" size="30" />
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <p class="font-bold text-stone-900">Key Contributions</p>
+              <p class="whitespace-pre-wrap">{{ proj.keyContributions.join('\t•\t') }}</p>
+            </div>
+          }
+        </div>
+
+        <div class="flex gap-4">
+          @if (proj.type === 'enterprise') {
+          } @else if (proj.type === 'public') {
+            <div class="pl-0.5 text-amber-600">
+              <ng-icon name="tablerStack2" size="30" />
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <p class="font-bold text-stone-900">Technologies</p>
+              <p class="whitespace-pre-wrap">{{ proj.technologies.join('\t•\t') }}</p>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex w-full flex-wrap gap-6">
+    <div class="flex flex-1">
+      <a
+        [href]="proj.projectUrl"
+        [attr.aria-label]="`${proj.type === 'public' ? `Visit ${proj.title} Website (opens in a new tab)` : `Launch ${proj.title} Live Demo`}`"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="amber-pressable flex w-full items-center rounded-lg border border-amber-400 bg-white px-4 py-2.5 text-sm font-bold text-amber-700"
+      >
+        <div class="flex flex-1 items-center justify-center gap-2.5">
+          <ng-icon name="tablerWorldCode" size="22" />
+          Visit Website
+        </div>
+        <ng-icon name="heroArrowTopRightOnSquare" size="16" />
+      </a>
+    </div>
+    <div class="flex flex-1">
+      <a
+        [href]="proj.repositoryUrl"
+        [attr.aria-label]="`View ${proj.title} ${proj.type === 'public' ? 'Repository' : 'Source Code'} (opens in a new tab)`"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="stone-pressable flex w-full items-center rounded-lg border border-stone-400 bg-white px-4 py-2.5 text-sm font-bold text-stone-700"
+      >
+        <div class="flex flex-1 items-center justify-center gap-2.5">
+          <ng-icon name="diGithubOriginal" size="22" />
+          @if (proj.type === 'enterprise') {
+            View Source Code
+          } @else if (proj.type === 'public') {
+            View Repository
+          }
+        </div>
+        <ng-icon name="heroArrowTopRightOnSquare" size="16" />
+      </a>
+    </div>
+  </div>
+</app-card>

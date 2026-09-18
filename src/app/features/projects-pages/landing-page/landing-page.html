@@ -1,7 +1,9 @@
 <app-page-header [pageHeaderContent]="pageHeaderContent" />
 <div class="flex flex-col gap-10">
   <proj-enterprise-showcases-section [enterpriseShowcasesHeader]="enterpriseShowcasesHeader" />
-  <proj-public-projects-section [publicProjectsHeader]="publicProjectsHeader" />
+  <proj-public-projects-section
+    [publicProjectsHeader]="publicProjectsHeader"
+    [publicProjects]="publicProjectsList"
+  />
   <app-coming-soon-section [content]="personalExperimentsSection" />
 </div>
-

@@ -29,9 +29,18 @@ body {
          duration-200
 
          active:scale-95
+}
 
+@utility amber-pressable {
+  @apply interactive-pressable
          hover:border-amber-600 
          hover:bg-amber-50
+}
+
+@utility stone-pressable {
+  @apply interactive-pressable
+         hover:border-stone-600 
+         hover:bg-stone-50
 }
 
 @utility interactive-link {
