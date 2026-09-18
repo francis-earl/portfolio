@@ -6,7 +6,6 @@ import { PageHeader } from '../../shared/components/page-header/page-header';
 import { ExperienceItem } from './experience-item/experience-item';
 
 @Component({
-  selector: 'app-experience-page',
   imports: [PageHeader, ExperienceItem],
   templateUrl: './experience-page.html',
   styleUrl: './experience-page.css',

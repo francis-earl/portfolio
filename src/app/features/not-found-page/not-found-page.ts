@@ -5,7 +5,6 @@ import { NgIcon } from '@ng-icons/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-not-found-page',
   imports: [NgIcon, RouterLink],
   templateUrl: './not-found-page.html',
 })
