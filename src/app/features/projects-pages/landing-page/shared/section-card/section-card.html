@@ -1,6 +1,6 @@
 @let proj = project();
 
-<app-card additionalClasses="flex flex-wrap gap-5">
+<app-card additionalClasses="flex flex-wrap gap-7">
   <div class="flex flex-wrap gap-6">
     <div class="flex flex-1">
       <img
@@ -25,6 +25,19 @@
       <div class="flex flex-col flex-wrap gap-5 text-sm">
         <div class="flex gap-4">
           @if (proj.type === 'enterprise') {
+            <div class="text-amber-600">
+              <ng-icon name="tablerTargetArrow" size="30" />
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <p class="font-bold text-stone-900">What this demonstrates</p>
+              <p>
+                {{
+                  proj.keyCapabilities
+                    .map((capability) => capability.title)
+                    .join('\u00A0\u00A0•\u00A0\u00A0')
+                }}
+              </p>
+            </div>
           } @else if (proj.type === 'public') {
             <div class="text-amber-600">
               <ng-icon name="tablerUserCode" size="30" />
@@ -38,26 +51,44 @@
 
         <div class="flex gap-4">
           @if (proj.type === 'enterprise') {
+            <div class="pl-0.5 text-amber-600">
+              <ng-icon name="tablerListDetails" size="30" />
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <p class="font-bold text-stone-900">Key Features</p>
+              <p>
+                {{ proj.summarizedKeyFeatures.join('\u00A0\u00A0•\u00A0\u00A0') }}
+              </p>
+            </div>
           } @else if (proj.type === 'public') {
             <div class="pl-0.5 text-amber-600">
               <ng-icon name="tablerPuzzle" size="30" />
             </div>
             <div class="flex flex-col gap-0.5">
               <p class="font-bold text-stone-900">Key Contributions</p>
-              <p class="whitespace-pre-wrap">{{ proj.keyContributions.join('\t•\t') }}</p>
+              <p>
+                {{ proj.keyContributions.join('\u00A0\u00A0•\u00A0\u00A0') }}
+              </p>
             </div>
           }
         </div>
 
         <div class="flex gap-4">
           @if (proj.type === 'enterprise') {
+            <div class="pl-0.5 text-amber-600">
+              <ng-icon name="tablerFolderCode" size="30" />
+            </div>
+            <div class="flex flex-col gap-0.5">
+              <p class="font-bold text-stone-900">Technical Highlights</p>
+              <p>{{ proj.technicalHighlights.join('\u00A0\u00A0•\u00A0\u00A0') }}</p>
+            </div>
           } @else if (proj.type === 'public') {
             <div class="pl-0.5 text-amber-600">
               <ng-icon name="tablerStack2" size="30" />
             </div>
             <div class="flex flex-col gap-0.5">
               <p class="font-bold text-stone-900">Technologies</p>
-              <p class="whitespace-pre-wrap">{{ proj.technologies.join('\t•\t') }}</p>
+              <p>{{ proj.technologies.join('\u00A0\u00A0•\u00A0\u00A0') }}</p>
             </div>
           }
         </div>
@@ -67,19 +98,33 @@
 
   <div class="flex w-full flex-wrap gap-6">
     <div class="flex flex-1">
-      <a
-        [href]="proj.projectUrl"
-        [attr.aria-label]="`${proj.type === 'public' ? `Visit ${proj.title} Website (opens in a new tab)` : `Launch ${proj.title} Live Demo`}`"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="amber-pressable flex w-full items-center rounded-lg border border-amber-400 bg-white px-4 py-2.5 text-sm font-bold text-amber-700"
-      >
-        <div class="flex flex-1 items-center justify-center gap-2.5">
-          <ng-icon name="tablerWorldCode" size="22" />
-          Visit Website
-        </div>
-        <ng-icon name="heroArrowTopRightOnSquare" size="16" />
-      </a>
+      @if (proj.type === 'enterprise') {
+        <a
+          [routerLink]="proj.projectUrl"
+          aria-label="Launch Demo"
+          class="amber-pressable flex w-full items-center rounded-lg border border-amber-400 bg-white px-4 py-2.5 text-sm font-bold text-amber-700"
+        >
+          <div class="flex flex-1 items-center justify-center gap-2.5">
+            <ng-icon name="tablerDeviceDesktopCode" size="22" />
+            Launch Demo
+          </div>
+          <ng-icon name="heroArrowTopRightOnSquare" size="16" />
+        </a>
+      } @else if (proj.type === 'public') {
+        <a
+          [href]="proj.projectUrl"
+          [attr.aria-label]="`Visit ${proj.title} Website (opens in a new tab)`"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="amber-pressable flex w-full items-center rounded-lg border border-amber-400 bg-white px-4 py-2.5 text-sm font-bold text-amber-700"
+        >
+          <div class="flex flex-1 items-center justify-center gap-2.5">
+            <ng-icon name="tablerWorldCode" size="22" />
+            Visit Website
+          </div>
+          <ng-icon name="heroArrowTopRightOnSquare" size="16" />
+        </a>
+      }
     </div>
     <div class="flex flex-1">
       <a

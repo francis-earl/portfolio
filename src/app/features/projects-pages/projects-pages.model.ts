@@ -18,7 +18,8 @@ export interface EnterpriseProject extends Project {
   fullOverview: string;
   professionalInspiration: string;
   keyCapabilities: SkillsDemonstrated[];
-  keyFeatures: string[][];
+  summarizedKeyFeatures: string[];
+  fullKeyFeatures: KeyFeature[];
   technicalHighlights: string[];
 }
 
@@ -26,6 +27,12 @@ export interface SkillsDemonstrated {
   id: number;
   title: string;
   description: string;
+}
+
+export interface KeyFeature {
+  id: number;
+  scope: string;
+  features: string[];
 }
 
 export interface PublicProject extends Project {

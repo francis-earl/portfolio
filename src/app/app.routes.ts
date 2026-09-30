@@ -27,7 +27,16 @@ export const routes: Routes = [
   },
   {
     path: 'projects',
-    component: ProjectsLandingPage,
+    children: [
+      {
+        path: '',
+        component: ProjectsLandingPage,
+      },
+      {
+        path: 'enterprise-data-explorer',
+        loadComponent: () => import('./features/projects-pages/enterprise/data-explorer-page/data-explorer-page').then((c) => c.DataExplorerPage),
+      }
+    ]
   },
   {
     path: 'learning',

@@ -1,3 +1,6 @@
 <section class="flex flex-col gap-3.5">
   <proj-section-header [header]="enterpriseShowcasesHeader()" />
+  @for (project of enterpriseProjects(); track project.id) {
+    <proj-section-card [project]="project" />
+  }
 </section>
